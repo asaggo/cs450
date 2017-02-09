@@ -35,7 +35,7 @@ class Neuron(object):
         for i in range(len(self.input)):
             self.activation += float(self.input[i])*float(self.weights[i])
         if self.activation >= threshold:
-            self.output = 1
+            self.output = 1 #later, maybe it needs a change (1/(1+e^h)x)) or something like that
         else:
             self.output = 0
 
@@ -74,7 +74,7 @@ def checkAccuracy(outputs,targets):
 
 
 
-while(accuracy <= 50):
+while(accuracy <= 94):
 
     for row in dt.data:
         isModified = False
