@@ -120,8 +120,8 @@ class Network(object): #numInputs should be len(dt.data[0]) or something like th
 network = Network(len(dt.data[0]),2,[2,3])
 for row in dt.data:
     network.calcLayer(row[:-1],0)
-    highestIndex = network.getHighest(network.layers[-1])
-    print highestIndex
+    #highestIndex = network.getHighest(network.layers[-1])
+    #print highestIndex
 
 
 
