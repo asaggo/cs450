@@ -37,7 +37,7 @@ class GetData(object):
 
 
     def normalizeData(self):
-        self.dataWOTarget = preprocessing.normalize(self.temp,norm='l2')
+        self.dataWOTarget = preprocessing.normalize(self.dataWOTarget,norm='l2')
         for row, target in zip(self.dataWOTarget,self.targets):
             self.data.append(list(row)+[target])
 
