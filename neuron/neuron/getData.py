@@ -8,7 +8,7 @@ class GetData(object):
         self.targets = []
         self.targetTypes = []
         self.data = []
-        self.file = open("pima.txt",'r')
+        self.file = open("iris.txt",'r')
     def parseFile(self):
         for line in self.file:
             self.temp.append(line.replace('\n','').split(',',len(line)))
@@ -17,13 +17,15 @@ class GetData(object):
             self.dataWOTarget.append(row[:-1])
             self.targets.append(row[-1])
 
+        #print self.targets
         self.targetTypes = set(self.targets)
 
 
 
         #[['0','0'],['0','0'],...]
         zerosTargets = [['0'] * len(self.targetTypes) for i in range(len(self.targets))]
-
+        #print self.targetTypes
+        #print zerosTargets
 
 
         #[['0','1'],['1','0'],....]

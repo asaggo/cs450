@@ -222,7 +222,7 @@ def isCorrect(outputLayer, target):
 
 acc = 0
 #for nTimes in range(1000): #100 epochs
-while acc < 90:
+while acc < 98:
     correct = 0
     for row in dt.data:
         #print "start weights: ",printWeights()
